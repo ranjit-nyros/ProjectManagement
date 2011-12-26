@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ProjectManagement</title>
+  <%= stylesheet_link_tag 'header','event_calendar' %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body style="background-color:black;">
+<div id=main >
+
+<!-- header -->
+<div class="header">
+<img src="/images/head_img/logo.jpg" height="120px" width="180px"><img src="/images/head_img/nyros.jpg" height="120px" width="620px">
+</div>
+<div id="menu">
+	<ul >
+	<%= link_to 'HOME', :controller => 'home',:action => 'about' %>
+	<%= link_to 'PROJECTS', :controller => 'home',:action => 'pro_list' %>
+	<%= link_to 'DEVELOPERS', :controller => 'home',:action => 'dev_list' %>
+	<%= link_to 'ADMIN', :controller => 'admin',:action => 'menu' %>
+	<%= link_to 'CONTACT',:controller => 'home',:action => 'contact' %>
+	</ul>
+			
+</div>
+
+
+<%#= link_to 'Projects', :controller => 'home',:action => 'pro_list' %>
+<%#= link_to 'Developers', :controller => 'home',:action => 'dev_list' %>
+<%#= link_to 'Admin', :controller => 'admin',:action => 'menu' %>
+<div id=content style="background-color:white;">
+<%= yield %>
+</div>
+<div id="footer">
+<p>Project Management App &nbsp; &copy;&nbsp; 2008.&nbsp; &nbsp; <a style="color:white;" href="#">Privacy Policy</a></p>
+</div>
+
+</div>
+</body>
+</html>

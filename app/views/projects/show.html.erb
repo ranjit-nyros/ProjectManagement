@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Project title:</b>
+  <%= @project.project_title %>
+</p>
+
+<p>
+  <b>Project description:</b>
+  <%= @project.project_description %>
+</p>
+
+<p>
+  <b>Project started:</b>
+  <%= @project.project_started %>
+</p>
+
+<p>
+  <b>Project ended:</b>
+  <%= @project.project_ended %>
+</p>
+
+<p>
+  <b>Project platform:</b>
+  <%= @project.project_platform %>
+</p>
+<p>
+<b>Image:</b>
+<%= image_tag(@project.image.url(:thumb)) %>
+</p> 
+<p>
+  <b>Project owner:</b>
+  <%= @project.project_owner %>
+</p>
+<p><strong>Developers:</strong><br />
+	<% for developer in @project.developers -%>
+		<%= developer.developer_name %><br />
+	<% end -%>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

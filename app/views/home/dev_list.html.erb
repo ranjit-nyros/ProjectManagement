@@ -1,0 +1,28 @@
+<h3>DEVELOPERS LIST</h3>
+
+<table border=1 cellspacing=2 cellpadding=2 width=800>
+  <tr >
+    <th>Developer name</th>
+    <th>Developer email</th>
+    <th>Developer platform</th>
+    <th>Date of join</th>
+    <th>Image path</th>
+   
+  </tr>
+
+<% @developers.each do |developer| %>
+  <tr>
+    <td><%= developer.developer_name %></td>
+    <td><%= developer.developer_email %></td>
+    <td><%= developer.developer_platform %></td>
+    <td><%= developer.date_of_join %></td>
+    <td><%= image_tag(developer.image_path,:size =>'90x90') %></td>
+    
+  </tr>
+<% end %>
+</table>
+<%= will_paginate @developers %>
+
+<br />
+
+

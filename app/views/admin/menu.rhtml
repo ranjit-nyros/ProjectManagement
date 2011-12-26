@@ -1,0 +1,18 @@
+<div class="menu">
+
+ <div style="font-size:15px;" class="identity">Logged in as: <%= session[:username] %></div>
+  <h3>Project Management: Administration</h3>
+<p>Welcome to the Project Management Administration Area. Select a link below to manage the database information.</p>
+ 
+  
+   <p style="font-size:15px;"> 
+		 <%= link_to('Manage Projects', :controller => 'projects', :action => 'index') %><br /><br /><br />
+		<%= link_to('Manage Developers', :controller => 'developers', :action => 'index') %><br /><br /><br />
+		<%= link_to('Manage Users', :controller => 'users', :action => 'index') %><br /><br /><br />
+
+		</p>
+<br/>
+<%= link_to('Logout',:action => 'logout') %><br />
+    
+ 
+</div>

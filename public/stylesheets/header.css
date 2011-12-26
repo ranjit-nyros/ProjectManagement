@@ -1,0 +1,46 @@
+#main
+{
+width :800px;
+margin :0px auto;
+background-color:white;
+}
+.header
+{
+width :800px;
+height:120px;
+}
+#menu 
+{
+width:780px;
+height:30px;
+color:white;
+background-color:#006600;
+font-size:13px;
+padding:10px ;
+}
+#menu a
+{
+padding:28px;
+font-weight:bold;
+font-size:16px; color:white;
+text-decoration:none;
+
+}
+a:visited { color: #666; }
+a:hover {color:grey;  }
+#footer 
+{
+width:800px;
+height:60px;
+background:green; 
+text-align:center;
+color:white;
+}
+#content
+{
+width:800px;
+height:auto;
+background-color:white;
+}
+   
+

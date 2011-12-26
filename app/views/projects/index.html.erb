@@ -1,0 +1,51 @@
+<%= link_to('Return To Admin Area', :controller => 'admin', :action => 'menu') %><br />
+<h2>Project List </h2>
+<div >
+<table border=1 >
+  <tr>
+    <th>Project title</th>
+    <th>Project description</th>
+    <th>Project started</th>
+    <th>Project ended</th>
+    <th>Project platform</th>
+    <th>Project owner</th>
+<th>Assigned Developer(s)</th>
+<th  >Technology_Used</th>
+<th  >ProjectUrl</th>
+<th  >Snapshot</th>
+    <th  ></th>
+<th ></th>
+<th  ></th>
+    
+  </tr>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.project_title %></td>
+    <td><%= project.project_description %></td>
+    <td><%= project.project_started %></td>
+    <td><%= project.project_ended %></td>
+    <td><%= project.project_platform %></td>
+    <td><%= project.project_owner %></td>
+	<td>
+			<% for developer in project.developers %>
+				<%= developer.developer_name %><br />
+			<% end %>
+		</td>
+<td><%= project.tecnology_used %></td>
+<td><%= project.url_path %></td>
+<td><%= image_tag(project.image.url(:thumb)) %></td>
+
+    <td><%= link_to 'Show', project %></td>
+    <td><%= link_to 'Edit', edit_project_path(project) %></td>
+    <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+</table>
+</div>
+<%= will_paginate @projects %>
+
+<br />
+
+<%= link_to 'New Project', new_project_path %>

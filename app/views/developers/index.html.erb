@@ -1,0 +1,33 @@
+<%= link_to('Return To Admin Area', :controller => 'admin', :action => 'menu') %><br />
+<h1>Listing developers</h1>
+
+<table border=1 cellspacing=2 cellpadding=2>
+  <tr >
+    <th>Developer name</th>
+    <th>Developer email</th>
+    <th>Developer platform</th>
+    <th>Date of join</th>
+    <th>Image path</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @developers.each do |developer| %>
+  <tr>
+    <td><%= developer.developer_name %></td>
+    <td><%= developer.developer_email %></td>
+    <td><%= developer.developer_platform %></td>
+    <td><%= developer.date_of_join %></td>
+    <td><%= image_tag(developer.image_path,:size =>'90x90') %></td>
+    <td><%= link_to 'Show', developer %></td>
+    <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
+    <td><%= link_to 'Destroy', developer, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+
+</table>
+<%= will_paginate @developers %>
+<br />
+
+<%= link_to 'New Developer', new_developer_path %>

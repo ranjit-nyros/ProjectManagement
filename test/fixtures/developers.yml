@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  developer_name: MyString
+  developer_email: MyString
+  developer_platform: MyString
+  date_of_join: 2011-12-19
+  image_path: MyString
+
+two:
+  developer_name: MyString
+  developer_email: MyString
+  developer_platform: MyString
+  date_of_join: 2011-12-19
+  image_path: MyString

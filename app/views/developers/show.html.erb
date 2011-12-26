@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Developer name:</b>
+  <%= @developer.developer_name %>
+</p>
+
+<p>
+  <b>Developer email:</b>
+  <%= @developer.developer_email %>
+</p>
+
+<p>
+  <b>Developer platform:</b>
+  <%= @developer.developer_platform %>
+</p>
+
+<p>
+  <b>Date of join:</b>
+  <%= @developer.date_of_join %>
+</p>
+
+<p>
+  <b>Image path:</b>
+  <%= @developer.image_path %>
+</p>
+
+
+<%= link_to 'Edit', edit_developer_path(@developer) %> |
+<%= link_to 'Back', developers_path %>
