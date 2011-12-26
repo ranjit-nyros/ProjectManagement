@@ -25,4 +25,8 @@ def event_display
 @event=Event.find(params[:id])
 render :action => 'event_dispaly'
 end
+def show_users
+@users=User.find(:all)
+render :action => 'show_users'
+end
 end
